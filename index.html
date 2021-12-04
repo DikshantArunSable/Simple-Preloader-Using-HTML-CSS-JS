@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Simple Preloader</title>
+
+    <meta name="title" content="Simple Preloader">
+
+<meta name="description" content="Using HTML, CSS And JS.Design A Simple Preloader Using HTML,CSS And JS.">
+
+<meta name="keywords" content="Preloader, HTML, CSS, JS">
+
+<meta name="robots" content="index, follow">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<meta name="language" content="English">
+
+    
+
+    <style>
+
+    
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+    
+
+      *,
+
+::before,
+
+::after {
+
+  box-sizing: border-box;
+
+  margin: 0;
+
+  padding: 0;
+
+}
+
+body {
+
+  background: #fafafa;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+    box-sizing: border-box;
+
+  margin: 0;
+
+  padding: 0;
+
+}
+
+#loader {
+
+  position: absolute;
+
+  background: #356BFF;
+
+  width: 100vw;
+
+  height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  transition: opacity 2s ease-in-out;
+
+}
+
+.dot {
+
+  width: 25px;
+
+  height: 25px;
+
+  border-radius: 50%;
+
+  background: #fafafa;
+
+  margin: 0 10px;
+
+  animation: loader infinite 0.3s alternate;
+
+}
+
+.d2 {
+
+  animation-delay: 0.05s;
+
+}
+
+.d3 {
+
+  animation-delay: 0.1s;
+
+}
+
+@keyframes loader {
+
+  100% {
+
+    transform: translateY(-30px);
+
+  }
+
+}
+
+#myDiv{
+
+  display:none;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 100vw;
+
+  height: 73vh;
+
+  font-size: 20px;
+
+  text-align: center;
+
+  color:#111;
+
+  margin-top: 50%;
+
+  font-family: 'Poppins', sans-serif;
+
+  animation: opa 2s linear;
+
+}
+
+@keyframes opa{
+
+  from{opacity: 0}
+
+  to{opacity: 1}
+
+}
+
+h1{
+
+  background-color: #356BFF;
+
+  color:#fff;
+
+  font-weight: 800;
+
+  margin: 20px;
+
+  border-radius:8px;
+
+  animation: frleft 1s linear;
+
+}
+
+@keyframes frleft{
+
+  0%{transform: translateX(-100px)}
+
+  85%{transform: translateX(0px)}
+
+}
+
+p{
+
+  background-color: #efefef;
+
+  border-radius:8px;
+
+  margin:10px 20px;
+
+  animation: frbtt 2s linear;
+
+}
+
+@keyframes frbtt{
+
+  0%{transform: translateY(900px)}
+
+  85%{transform: translateY(0px)}
+
+}
+
+#footer{
+
+  position: absolute;
+
+  bottom: 0px;
+
+  padding: 20px;
+
+  color:#fafafa;
+
+  background-color: #111;
+
+  font-size: 18px
+
+}
+
+#footer span{
+
+  font-weight: 800;
+
+  background-color: #e1e1e1;
+
+  color:#111;
+
+  padding:1px 10px;
+
+  border-radius: 8px
+
+}
+
+    </style>
+
+    
+
+    
+
+</head>
+
+<body onload="myFunction()">
+
+  
+
+<!--[[[[[[[Loader]]]]]]]-->
+
+      <div class="loader-container" id="loader">
+
+      <div class="dot d1"></div>
+
+      <div class="dot d2"></div>
+
+      <div class="dot d3"></div>
+
+    </div>
+
+<!--[[[[[[[Main Content]]]]]]]-->
+
+    <div id="myDiv">
+
+      
+
+      <h1>Hello Friends!</h1>
+
+      <br />
+
+      
+
+      <p>
+
+        This Is An Example Of Simple Preloader.
+
+      </p>
+
+      
+
+      <div id="footer">
+
+      </div>
+
+      
+
+    </div>
+
+<!--[[[[[[[Script]]]]]]]-->
+
+  <script>
+
+  
+
+var myVar;
+
+function myFunction() {
+
+ myVar = setTimeout(loader, 1000);
+
+ document.getElementById('footer').innerHTML='Designed And Developed With ❤️ By <span>DIKSHANT SABLE</span>';
+
+}
+
+function loader() {
+
+  document.getElementById("loader").style.display = "none";
+
+  document.getElementById("myDiv").style.display = "block";
+
+}
+
+    
+
+    
+
+  </script>
+
+  
+
+</body>
+
+</html>
